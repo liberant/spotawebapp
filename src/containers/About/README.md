@@ -85,7 +85,7 @@ All application parts and code should be stored in the `src` folder.
 
 All `react` components should be separated in presentational and container components. This great [article](https://www.fullstackreact.com/p/using-presentational-and-container-components-with-redux/) describes the why and how. For this purpose we have the `components` and `containers` folders.
 
-All `redux` related files are in the `store` folder. You can find more about redux [here](http://redux.js.org/docs/introduction/).
+All `redux` related files are in the `store` folder. You can find more about redux [here](https://redux.js.org/docs/introduction/).
 
 The folders `locales` and `themes` are used to store data for different locales and themes.
 
@@ -328,4 +328,4 @@ To:
 
 [logo-image]: https://spotaproject.firebaseapp.com/favicon-32x32.png
 [code-style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
-[code-style-url]: http://standardjs.com/
+[code-style-url]: https://standardjs.com/

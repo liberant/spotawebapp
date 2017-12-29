@@ -13,12 +13,12 @@ exports = module.exports = functions.auth.user().onDelete( event => {
   const displayName = user.displayName
 
   const mailOptions = {
-    from: '"Tarik Huber" <huber.tarik@gmail.com>',
+    from: '"Spota Admin" <admin@spota.com>',
     to: email
   }
 
   mailOptions.subject = `Bye!`
-  mailOptions.text = `Hey ${displayName}!, We confirm that we have deleted your Spota Social Marketing account.`
+  mailOptions.text = `Hello ${displayName}!, We confirm that we have deleted your Spota Social Marketing account.`
 
   const sendEmail=mailTransport.sendMail(mailOptions).then(() => {
     console.log('Account deletion confirmation email sent to:', email)

@@ -26,10 +26,10 @@ exports = module.exports = functions.auth.user().onCreate( event => {
 
   if(email){
     const mailOptions = {
-      from: '"Tarik Huber" <huber.tarik@gmail.com>',
+      from: '"Spota Admin" <admin@spota.com>',
       to: email,
       subject: `Welcome to Spota Social Marketing!`,
-      text: `Hey ${displayName}!, Welcome to Spota Social Marketing. I hope you will enjoy the demo application.`
+      text: `Hello ${displayName}!, Welcome to Spota Social Marketing. I hope you will enjoy our community.`
     }
 
     promises.push(mailTransport.sendMail(mailOptions))
