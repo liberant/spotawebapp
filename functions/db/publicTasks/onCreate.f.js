@@ -37,7 +37,7 @@ exports = module.exports = functions.database.ref('/public_tasks/{taskUid}').onC
           title: user ? `${user.displayName} created a Task!` : 'Task created!',
           body: eventSnapshot.child('title').val(),
           icon: (user && user.photoURL !== undefined) ? user.photoURL : '/apple-touch-icon.png',
-          click_action: 'https://www.react-most-wanted.com/tasks'
+          click_action: 'https://spotaproject.firebaseapp.com/tasks'
         }
       }
 

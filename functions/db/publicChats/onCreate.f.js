@@ -37,7 +37,7 @@ exports = module.exports = functions.database.ref('/public_chats/{taskUid}').onC
         title: `${user?user.displayName:'Someone'} wrote a new message!`,
         body: eventSnapshot.child('message').val(),
         icon: (user && user.photoURL!==undefined)?user.photoURL:'/apple-touch-icon.png',
-        click_action: 'https://www.react-most-wanted.com/public_chats'
+        click_action: 'https://spotaproject.firebaseapp.com/public_chats'
       }
     };
 

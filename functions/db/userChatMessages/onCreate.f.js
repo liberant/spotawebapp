@@ -58,7 +58,7 @@ exports = module.exports = functions.database.ref('/user_chat_messages/{senderUi
         title: `${snapValues.authorName} `,
         body: lastMessage,
         icon: snapValues.authorPhotoUrl ? snapValues.authorPhotoUrl : '/apple-touch-icon.png',
-        click_action: `https://www.react-most-wanted.com/chats/edit/${senderUid}`,
+        click_action: `https://spotaproject.firebaseapp.com/chats/edit/${senderUid}`,
         tag: `chat`
       }
     }

@@ -1,15 +1,8 @@
-# ‌‌ [![LOGO][logo-image]][logo-url] React Most Wanted
-[![Build Status][travis-image]][travis-url]
-[![Dependency Status][daviddm-image]][daviddm-url]
-[![License][license-image]][license-url]
-[![Code Coverage][coverage-image]][coverage-url]
-[![Code Style][code-style-image]][code-style-url]
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-This is a `shell` for my future applications with the minimum features I would like them to have. Because of this I have designed it to be as simple as possible and without regrets about feature implementations.
-
-You can find an example of this project in this [DEMO](https://www.react-most-wanted.com/).
+This is a `shell` for my future applications with the minimum features I would like them to have.
 
 I tried to make the project as clean as possible and to use all libraries in their pure ways.
 
@@ -18,8 +11,6 @@ I tried to make the project as clean as possible and to use all libraries in the
 - [Features](#features)
 - [Folder Structure](#folder-structure)
 - [Usage](#usage)
-  - [Simple run](#simple-run)
-  - [Reuse for own project](#reuse-for-own-project)
 - [Customatisation](#customatisation)
   - [Internationalization](#internationalization)
   - [Theming](#theming)
@@ -33,7 +24,7 @@ I tried to make the project as clean as possible and to use all libraries in the
 
 ## Features
 
-`React Most Wanted` is a "base project", "starter kit", "boilerplate" (call it whatever you like) project with my **personal** "Most Wanted" features:
+`React to This` is a "base project", "starter kit", "boilerplate" (call it whatever you like) project with my "Most Wanted" features:
 * **easy to maintain**
 * ***PWA** - has Progressive Web App features
 * **responsive** - included with PWA
@@ -47,9 +38,7 @@ I tried to make the project as clean as possible and to use all libraries in the
 * **code splitting**
 * **CI** and **CD**
 
-All these features can be programmed from scratch. But why should anyone do this? There are so many great developers out there creating great applications, libraries and tools to help them and you to develop fast and easily. This is my small contribution to help others have an easier time beginning to use React.
-
-If all that is true, then why did I create this project? There must already be a great starter kit for React applications! Well, there are lots of them but unfortunately none of them was as I would like it to be. Some don't have enough features to just start and some have so many that I had to delete features I don't need. I want to create a starting point that has, as said before, my **personal** "Most Wanted" features. If someone likes it, great :)
+All these features can be programmed from scratch. But why should anyone do this? There are so many great developers out there creating great applications, libraries and tools to help them and you to develop fast and easily.
 
 There are also other cool features:
 * **realtime database**
@@ -67,7 +56,7 @@ The further text explains which libraries/modules are used, and why. Some of the
 The project has following folder structure:
 
 ```
-react-most-wanted/
+spotawebapp/
   .gitignore
   README.md
   node_modules/
@@ -102,26 +91,26 @@ The folders `locales` and `themes` are used to store data for different locales 
 
 ## Usage
 
-### Simple run
-
-
 To just run the project on you own device you should have installed: git, node and npm. Let's assume that this is the case.
 
 Now in your console go to the destination where you want to save the project and run this command:
 
 ```js
-git clone https://github.com/TarikHuber/react-most-wanted
+git clone git@bitbucket.org:novenpw/spotawebapp.git new_project
 ```
 
-or
+if you want to save the project into a specific folder (in this example "new_project"). The folder must be empty!
 
-```js
-git clone https://github.com/TarikHuber/react-most-wanted my_project
-```
+Now go with the console into the folder.
 
-if you want to save the project into a specific folder (in this example "my_project"). The folder must be empty!
+Make a mirror of the repository so you don't push changes onto my source.  
 
-Now go with the console into the folder. If you haven't provided a name like "my_project" then it will be the default "react-most-wanted".
+
+After cloning the repo into your own you should change the configurations like project name and the firebase config. Here is a list of all changes you should make:
+* **package.json**  - here you should change the name and version
+* **src/config.js**  - here you should change all firebase data and other options
+* **public/index.html**  - change the title (it will be overridden, but it looks better)
+* **public/firebase-messaging-sw.js**  - change the ``messagingSenderId``
 
 In he folder run this command to start the development mode of the project:
 
@@ -137,15 +126,6 @@ npm run build
 
 After it finished follow the instructions or publish the project build folder to your preferred  provider or own server.
 
-### Reuse for own project
-
-You can either fork this project or clone it into your own repo. I use the second for new projects. You can find [here](https://help.github.com/articles/duplicating-a-repository/) more information about how to clone/duplicate a repo into your own.
-
-After cloning the repo into your own you should change the configurations like project name and the firebase config. Here is a list of all changes you should make:
-* **package.json**  - here you should change the name and version
-* **src/config.js**  - here you should change all firebase data and other options
-* **public/index.html**  - change the title (it will be overridden, but it looks better)
-* **public/firebase-messaging-sw.js**  - change the ``messagingSenderId``
 
 
 After setting up the code we need to deploy our application to Firebase. As first create an application build by running `npm run build`.
@@ -166,7 +146,7 @@ You should now be able to deploy your application to your Firebase using `fireba
 
 Internationalization is very important. Even if you use just a single language your application should be prepared for more of them. It is easier to apply this from the start than to refactor the whole application afterwards.
 
-The only thing you'll have to do to add a new language is that you have to add the localisationData in the locales [index.js](https://github.com/TarikHuber/react-most-wanted/blob/master/src/locales/index.js) folder like in the code sniped below. Here we add the language for to the project:
+The only thing you'll have to do to add a new language is that you have to add the localisationData in the locales [index.js](/src/locales/index.js) folder like in the code sniped below. Here we add the language for to the project:
 
 ```js
 
@@ -342,21 +322,10 @@ To:
 
 ## License
 
-MIT
 
 ## Logo
 
-Thanks to @SiradDev for creating the logo for this project :)
 
-[logo-image]: https://www.react-most-wanted.com/favicon-32x32.png
-[logo-url]: https://github.com/TarikHuber/react-most-wanted/blob/master/README.md
-[travis-image]: https://travis-ci.org/TarikHuber/react-most-wanted.svg?branch=master
-[travis-url]: https://travis-ci.org/TarikHuber/react-most-wanted
-[daviddm-image]: https://img.shields.io/david/TarikHuber/react-most-wanted.svg?style=flat-square
-[daviddm-url]: https://david-dm.org/TarikHuber/react-most-wanted
-[coverage-image]: https://img.shields.io/codecov/c/github/TarikHuber/react-most-wanted.svg?style=flat-square
-[coverage-url]: https://codecov.io/gh/TarikHuber/react-most-wanted
-[license-image]: https://img.shields.io/npm/l/express.svg
-[license-url]: https://github.com/TarikHuber/react-most-wanted/master/LICENSE
+[logo-image]: https://spotaproject.firebaseapp.com/favicon-32x32.png
 [code-style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [code-style-url]: http://standardjs.com/

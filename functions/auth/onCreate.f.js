@@ -28,8 +28,8 @@ exports = module.exports = functions.auth.user().onCreate( event => {
     const mailOptions = {
       from: '"Tarik Huber" <huber.tarik@gmail.com>',
       to: email,
-      subject: `Welcome to React Most Wanted!`,
-      text: `Hey ${displayName}!, Welcome to React Most Wanted. I hope you will enjoy the demo application.`
+      subject: `Welcome to Spota Social Marketing!`,
+      text: `Hey ${displayName}!, Welcome to Spota Social Marketing. I hope you will enjoy the demo application.`
     }
 
     promises.push(mailTransport.sendMail(mailOptions))

@@ -153,7 +153,7 @@ class Dashboard extends Component {
         iconElementRight={
           <FlatButton
             style={{ marginTop: 4 }}
-            href='https://github.com/TarikHuber/react-most-wanted'
+            href='https://bitbucket.org/novenpw/spotawebapp.git'
             target='_blank'
             rel='noopener'
             secondary
