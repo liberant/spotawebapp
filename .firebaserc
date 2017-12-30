@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "spotaproject"
+    "default": "spotaproject",
+    "dev": "spotaproject",
+    "prod": "spotaproject"
   }
 }

@@ -4,7 +4,7 @@ try {admin.initializeApp(functions.config().firebase);} catch(e) {} // You do th
 const counting = require('../../utils/counting')
 
 exports = module.exports = functions.database.ref('/users/{userUid}').onCreate(
-  (event) => {
+  event => {
 
     const user = event.data // The Firebase user.
     const provider=user.providerData?user.providerData[0]:{}
@@ -12,6 +12,7 @@ exports = module.exports = functions.database.ref('/users/{userUid}').onCreate(
 
     let providerCount = null
 
+    
     if(providerId){
       providerCount= admin.database()
       .ref(`/provider_count/${providerId}`)
@@ -21,6 +22,6 @@ exports = module.exports = functions.database.ref('/users/{userUid}').onCreate(
     return Promise.all([
       counting.handleListChange(event, 'users_count'),
       providerCount
-    ])
-  }
+    ]) 
+  } 
 )

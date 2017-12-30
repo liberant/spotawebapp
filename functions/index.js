@@ -10,11 +10,7 @@
 const glob = require('glob')
 const camelCase = require('camelcase')
 // The Cloud Functions for Firebase SDK to create Cloud Functions and setup triggers.
-const functions = require('firebase-functions');
 
-// The Firebase Admin SDK to access the Firebase Realtime Database. 
-const admin = require('firebase-admin');
-admin.initializeApp(functions.config().firebase);
 
 const files = glob.sync('./**/*.f.js', { cwd: __dirname, ignore: './node_modules/**' })
 for (let f = 0, fl = files.length; f < fl; f++) {
