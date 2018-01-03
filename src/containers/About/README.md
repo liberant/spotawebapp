@@ -2,30 +2,21 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-This is a `shell` for my future applications with the minimum features I would like them to have.
-
-I tried to make the project as clean as possible and to use all libraries in their pure ways.
-
 ## Table of Contents
 
 - [Features](#features)
 - [Folder Structure](#folder-structure)
-- [Usage](#usage)
 - [Customatisation](#customatisation)
   - [Internationalization](#internationalization)
   - [Theming](#theming)
   - [Firebase lists](#firebase-lists)
   - [Drawer width](#drawer-width)
   - [Authorisation](#authorisation)
-- [TO DO](#to-do)
-- [License](#license)
 - [Logo](#logo)
 
 
 ## Features
 
-`React to This` is a "base project", "starter kit", "boilerplate" (call it whatever you like) project with my "Most Wanted" features:
-* **easy to maintain**
 * ***PWA** - has Progressive Web App features
 * **responsive** - included with PWA
 * **material-ui**
@@ -37,19 +28,12 @@ I tried to make the project as clean as possible and to use all libraries in the
 * **authorisation**
 * **code splitting**
 * **CI** and **CD**
-
-All these features can be programmed from scratch. But why should anyone do this? There are so many great developers out there creating great applications, libraries and tools to help them and you to develop fast and easily.
-
-There are also other cool features:
 * **realtime database**
 * **realtime forms**
 * **messaging/notifications** - every logged user that approved messaging on login will receive notifications for new tasks created
 * **full authentication** - with Google, Facebook, Twitter, GitHub, email and **phone**
 * **online and last time offline state for users**
 * **file uploads to the firebase storage**
-
-
-The further text explains which libraries/modules are used, and why. Some of them are installed and used in their `pure` way as described in their documentation. In those cases we will just show the link to the official documentation to avoid outdated descriptions of their usage.
 
 ## Folder Structure
 
@@ -88,56 +72,6 @@ All `react` components should be separated in presentational and container compo
 All `redux` related files are in the `store` folder. You can find more about redux [here](https://redux.js.org/docs/introduction/).
 
 The folders `locales` and `themes` are used to store data for different locales and themes.
-
-## Usage
-
-To just run the project on you own device you should have installed: git, node and npm. Let's assume that this is the case.
-
-Now in your console go to the destination where you want to save the project and run this command:
-
-```js
-git clone git@bitbucket.org:novenpw/spotawebapp.git new_project
-```
-
-if you want to save the project into a specific folder (in this example "new_project"). The folder must be empty!
-
-Now go with the console into the folder.
-
-Make a mirror of the repository so you don't push changes onto my source.  
-
-
-After cloning the repo into your own you should change the configurations like project name and the firebase config. Here is a list of all changes you should make:
-* **package.json**  - here you should change the name and version
-* **src/config.js**  - here you should change all firebase data and other options
-* **public/index.html**  - change the title (it will be overridden, but it looks better)
-* **public/firebase-messaging-sw.js**  - change the ``messagingSenderId``
-
-In he folder run this command to start the development mode of the project:
-
-```js
-npm run dev
-```
-
-For publishing run:
-
-```js
-npm run build
-```
-
-After it finished follow the instructions or publish the project build folder to your preferred  provider or own server.
-
-
-
-After setting up the code we need to deploy our application to Firebase. As first create an application build by running `npm run build`.
-
-To use firebase we need to install the firebase tools by running `npm install -g firebase-tools` and after that login to firebase with `firebase login`.
-
-After the login run `fribease init` to setup the Firebase project. Override the existing project and select yours from your Firebase console.
-Override only the '.firebasesrc' file and leave the other as they are because the database and storage rules, functions and firebase settings should stay as they are. If you override them the project will probably not work as it should.
-
-Don't forget to setup the email configs into the firebase functions using `firebase functions:config:set gmail.email="myusername@gmail.com" gmail.password="secretpassword"`.
-
-You should now be able to deploy your application to your Firebase using `firebase deploy`.
 
 
 ##Customatisation
@@ -283,7 +217,7 @@ Note that authentication and authorization are not the same thing! With authenti
 
 Only administrators have access to add or remove grants and roles to a user. Only administrators can make other users to administrators.
 
-**WARNING:** In this demo the rules are manipulated such that everyone can make other users admins, and a user can even become an admin on their own. Everyone can see how this part works. In production a change should be made in the database.rules file.
+**WARNING:** In dev the rules are that everyone can make other users admins, and a user can even become an admin on their own. In production a change should be made in the database.rules file.
 
 From:
 
@@ -308,19 +242,6 @@ To:
 },
 
 ```
-
-
-
-## TO DO
-
-- [X] implement all or most firebase functionalities
-- [X] implement [redux-offline](https://github.com/jevakallio/redux-offline) with examples
-- [X] implement code splitting
-- [X] implement continuous integration
-- [ ] update to material-ui@next
-- [ ] finish tests
-
-## License
 
 
 ## Logo
