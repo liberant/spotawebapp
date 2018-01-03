@@ -76,7 +76,7 @@
   "author": "Noven Purnell-Webb",
   "homepage": "https://spotaproject.firebaseapp.com/",
   "license": "MIT",
-  "repository": "https://bitbucket.org/novenpw/spotawebapp.git",
+  "repository": "https://bitbucket.org/novenpw/spotawebapp",
   "keywords": [
     "spotawebapp",
     "react",

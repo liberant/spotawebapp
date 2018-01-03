@@ -6,7 +6,7 @@ module.exports = {
       return;
     }
 
-    const eventSnapshot=event.data;
+    const eventSnapshot=event.data
 
     //Sync only if displayName and photoURL changed
     if(!eventSnapshot.child('displayName').changed() && !eventSnapshot.child('photoURL').changed()){
@@ -16,11 +16,11 @@ module.exports = {
 
     let tasksRef=admin.database().ref("/public_tasks");
 
-    var query = tasksRef.orderByChild("userId").equalTo(event.params.userUid);
+    var query = tasksRef.orderByChild("userId").equalTo(event.params.userUid)
 
 
-    const userName=eventSnapshot.child('displayName').val();
-    const userPhotoURL=eventSnapshot.child('photoURL').val();
+    const userName=eventSnapshot.child('displayName').val()
+    const userPhotoURL=eventSnapshot.child('photoURL').val()
 
 
 
@@ -43,9 +43,9 @@ module.exports = {
 
       return tasksRef.update(updates, function(error) {
         if (error) {
-          console.log('Error:', error);
+          console.log('Error:', error)
         } else {
-          console.log('Task synced with user successfully!');
+          console.log('Task synced with user successfully!')
         }
       });
 
@@ -67,28 +67,28 @@ module.exports = {
     }
 
 
-    let tasksRef=admin.database().ref("/public_chats");
+    let tasksRef=admin.database().ref("/public_chats")
 
     var query = tasksRef.orderByChild("userId").equalTo(event.params.userUid);
 
 
-    const userName=eventSnapshot.child('displayName').val();
-    const userPhotoURL=eventSnapshot.child('photoURL').val();
+    const userName=eventSnapshot.child('displayName').val()
+    const userPhotoURL=eventSnapshot.child('photoURL').val()
 
 
 
     return query.once('value')
     .then((snapshot) =>{
 
-      var updates = {};
+      var updates = {}
       snapshot.forEach((childSnapshot) => {
 
         //Update if user is edited and delete if user is deleted
         if(event.data.exists()){
-          updates[`/${childSnapshot.key}/userName`] = userName;
-          updates[`/${childSnapshot.key}/userPhotoURL`] = userPhotoURL;
+          updates[`/${childSnapshot.key}/userName`] = userName
+          updates[`/${childSnapshot.key}/userPhotoURL`] = userPhotoURL
         }else{
-          updates[`/${childSnapshot.key}`] = null;
+          updates[`/${childSnapshot.key}`] = null
         }
 
       });
@@ -96,9 +96,9 @@ module.exports = {
 
       return tasksRef.update(updates, function(error) {
         if (error) {
-          console.log('Error:', error);
+          console.log('Error:', error)
         } else {
-          console.log('Public chat synced with user successfully!');
+          console.log('Public chat synced with user successfully!')
         }
       });
 

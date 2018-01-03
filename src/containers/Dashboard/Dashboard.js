@@ -153,7 +153,7 @@ class Dashboard extends Component {
         iconElementRight={
           <FlatButton
             style={{ marginTop: 4 }}
-            href='https://bitbucket.org/novenpw/spotawebapp.git'
+            href='https://bitbucket.org/novenpw/spotawebapp'
             target='_blank'
             rel='noopener'
             secondary
@@ -216,7 +216,7 @@ class Dashboard extends Component {
           </div>
         </div>
 
-      </Activity >
+      </Activity>
     )
   }
 }

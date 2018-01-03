@@ -34,6 +34,7 @@ const messages=defineMessages({
   my_account: 'My account',
   name: 'Name',
   email: 'E-Mail',
+  email_hint: 'Enter email',
   password: 'Password',
   new_password: 'New Password',
   confirm_password: 'Confirm Password',
@@ -77,8 +78,8 @@ const messages=defineMessages({
   delete_company_message: 'The company will be deleted!',
   full_name_label: 'Full name',
   full_name_hint: 'Enter full name',
-  vat_label: 'UID',
-  vat_hint: 'Enter UID',
+  abn_label: 'ABN',
+  abn_hint: 'Enter ABN',
   description_label: 'Description',
   description_hint: 'Enter description',
   name_label: 'Name',
@@ -144,7 +145,7 @@ const messages=defineMessages({
   user_label_search: 'Search user',
   document: 'Document',
   collection: 'Collection',
-
+error_required_field: 'This field is required',
 });
 
 export default messages;

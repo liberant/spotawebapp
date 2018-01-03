@@ -106,12 +106,12 @@ class Form extends Component {
 
           <div>
             <Field
-              name="vat"
+              name="abn"
               disabled={!initialized}
               component={TextField}
-              hintText={intl.formatMessage({ id: 'vat_hint' })}
-              floatingLabelText={intl.formatMessage({ id: 'vat_label' })}
-              ref="vat"
+              hintText={intl.formatMessage({ id: 'abn_hint' })}
+              floatingLabelText={intl.formatMessage({ id: 'abn_label' })}
+              ref="abn"
               withRef
             />
           </div>

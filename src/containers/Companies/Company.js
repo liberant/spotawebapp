@@ -30,7 +30,7 @@ class Company extends Component {
 
     errors.name = !values.name ? intl.formatMessage({ id: 'error_required_field' }) : '';
     errors.full_name = !values.full_name ? intl.formatMessage({ id: 'error_required_field' }) : '';
-    errors.vat = !values.vat ? intl.formatMessage({ id: 'error_required_field' }) : '';
+    errors.abn = !values.abn ? intl.formatMessage({ id: 'error_required_field' }) : '';
 
     return errors
   }
