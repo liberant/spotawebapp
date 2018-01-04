@@ -247,6 +247,6 @@ To:
 ## Logo
 
 
-[logo-image]: https://spotaproject.firebaseapp.com/favicon-32x32.png
+[logo-image]: https://spota-2139f.firebaseapp.com/favicon-32x32.png
 [code-style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [code-style-url]: https://standardjs.com/

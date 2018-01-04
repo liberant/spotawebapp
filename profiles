@@ -1,0 +1,33 @@
+
+interface 
+ User
+    id
+    firstName 
+    lastName 
+    email 
+    phone? 
+    mobile 
+    street? 
+    suburb? 
+    state
+   loginStatus 
+    photoURL? 
+    interests[] 
+    wishlist[] 
+    purchaseHistory[]
+  
+
+ Business
+   Business Name
+   Category
+   Website
+   Phone
+   Email
+   &nbsp;street 
+   suburb 
+   state 
+   Reviews[]
+   AdminUser
+   StaffUsers[]
+   Products[]
+   Reviews[]

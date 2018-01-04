@@ -1,5 +1,5 @@
 {
-  "name": "spotawebapp",
+  "name": "spota",
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
@@ -74,11 +74,11 @@
     "eject": "react-scripts eject"
   },
   "author": "Noven Purnell-Webb",
-  "homepage": "https://spotaproject.firebaseapp.com/",
+  "homepage": "https://spota-2139f.firebaseapp.com",
   "license": "MIT",
   "repository": "https://bitbucket.org/novenpw/spotawebapp",
   "keywords": [
-    "spotawebapp",
+    "spota",
     "react",
     "redux",
     "firebase"

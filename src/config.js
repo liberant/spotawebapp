@@ -6,20 +6,20 @@ import grants from './grants'
 
 const config = {
   firebase_config: {
-    apiKey: "AIzaSyDR6-mGXKNnkJ0Sv7ufX8oNCGYk5UxVVr0",
-    authDomain: "spotaproject.firebaseapp.com",
-    databaseURL: "https://spotaproject.firebaseio.com",
-    projectId: "spotaproject",
-    storageBucket: "spotaproject.appspot.com",
-    messagingSenderId: "746405070068"
+    apiKey: "AIzaSyBgXyshWBQQjvOCxUHKZnSCuhREqRiU66U",
+    authDomain: "spota-2139f.firebaseapp.com",
+    databaseURL: "https://spota-2139f.firebaseio.com",
+    projectId: "spota-2139f",
+    storageBucket: "spota-2139f.appspot.com",
+    messagingSenderId: "738533213905"
   },
   firebase_config_dev: {
-    apiKey: "AIzaSyDR6-mGXKNnkJ0Sv7ufX8oNCGYk5UxVVr0",
-    authDomain: "spotaproject.firebaseapp.com",
-    databaseURL: "https://spotaproject.firebaseio.com",
-    projectId: "spotaproject",
-    storageBucket: "spotaproject.appspot.com",
-    messagingSenderId: "746405070068"
+    apiKey: "AIzaSyBgXyshWBQQjvOCxUHKZnSCuhREqRiU66U",
+    authDomain: "spota-2139f.firebaseapp.com",
+    databaseURL: "https://spota-2139f.firebaseio.com",
+    projectId: "spota-2139f",
+    storageBucket: "spota-2139f.appspot.com",
+    messagingSenderId: "738533213905"
   },
   firebase_providers: [
     'google.com',
@@ -30,7 +30,7 @@ const config = {
     'phone'
   ],
   initial_state: {
-    theme: 'dark',
+    theme: 'light',
     locale: 'en'
   },
   drawer_width: 256,

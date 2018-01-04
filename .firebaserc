@@ -1,7 +1,7 @@
 {
   "projects": {
-    "default": "spotaproject",
-    "dev": "spotaproject",
-    "prod": "spotaproject"
+    "default": "spota-2139f",
+    "dev": "spota-2139f",
+    "prod": "spota-2139f"
   }
 }
