@@ -2,16 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from 'react-intl';
-import Activity from 'rmw-shell';
+import { Activity } from 'rmw-shell';
 import { setSimpleValue } from 'rmw-shell';
 import MyAccountForm from '../../components/Forms/MyAccountForm';
 import { withRouter } from 'react-router-dom';
 import FontIcon from 'material-ui/FontIcon';
 import FlatButton from 'material-ui/FlatButton';
 import Dialog from 'material-ui/Dialog';
+import firebase from 'firebase';
+
 import { withFirebase } from 'firekit-provider';
 import FireForm from 'fireform';
-import { GoogleIcon, FacebookIcon, GitHubIcon, TwitterIcon } from 'rmw-shell';
+import { GoogleIcon, FacebookIcon, GitHubIcon, TwitterIcon } from 'rmw-shell/es/components/Icons';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { change, submit, formValueSelector } from 'redux-form';
 import { ResponsiveMenu } from 'material-ui-responsive-menu';
@@ -166,11 +168,13 @@ export var MyAccount = function (_Component) {
           authStateChanged = _this$props5.authStateChanged,
           authError = _this$props5.authError;
 
-debugger;
-      var simpleChange = values.displayName && values.displayName.localeCompare(auth.displayName) || values.photoURL && values.photoURL.localeCompare(auth.photoURL);
+
+      var simpleChange = values.displayName && values.displayName.localeCompare(auth.displayName) || values.firstName && values.firstName.localeCompare(auth.firstName) || values.lastName && values.lastName.localeCompare(auth.lastName) || values.photoURL && values.photoURL.localeCompare(auth.photoURL);
 
       var simpleValues = {
         displayName: values.displayName,
+        firstName: values.firstName,
+        lastName: values.lastName,
         photoURL: values.photoURL
 
         //Change simple data
@@ -268,7 +272,14 @@ debugger;
       if (!values.displayName) {
         errors.displayName = 'Required';
       }
-
+      /*
+      if (!values.firstName) {
+        values.firstName = values.displayName.split(' ')[0];
+      }
+      if (!values.lastName) {
+        values.lastName = values.displayName.split(' ')[1];
+      }
+*/
       if (!values.email) {
         errors.email = 'Required';
       } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
@@ -411,7 +422,7 @@ var mapStateToProps = function mapStateToProps(state) {
 
   var delete_user = simpleValues.delete_user;
   var new_user_photo = simpleValues.new_user_photo;
-debugger;
+
   return {
     new_user_photo: new_user_photo,
     intl: intl,

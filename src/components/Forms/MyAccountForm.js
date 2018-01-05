@@ -5,9 +5,9 @@ import { intlShape } from 'react-intl';
 import { Field, reduxForm } from 'redux-form';
 import { TextField } from 'redux-form-material-ui';
 import FontIcon from 'material-ui/FontIcon';
-import { ImageCropDialog } from 'rmw-shell';
+import { ImageCropDialog } from 'rmw-shell/es/containers/ImageCropDialog';
 import IconButton from 'material-ui/IconButton';
-import { AvatarImageField } from 'rmw-shell';
+import { AvatarImageField } from 'rmw-shell/es/components/ReduxFormFields';
 import { withAppConfigs } from 'rmw-shell';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41,7 +41,7 @@ var MyAccountForm = function (_Component) {
         appConfig = _props.appConfig,
         handlePhotoUploadSuccess = _props.handlePhotoUploadSuccess;
 
-debugger;
+
     var uid = auth.uid;
     var showPasswords = isLinkedWithProvider('password');
 
@@ -103,6 +103,32 @@ debugger;
             withRef: true
           })
         ),
+        React.createElement(
+          'div',
+            null,
+            React.createElement(Field, {
+              name: 'firstName',
+              disabled: !initialized,
+              component: TextField,
+              hintText: intl.formatMessage({ id: 'fname_hint' }),
+              floatingLabelText: intl.formatMessage({ id: 'fname_label' }),
+              ref: 'firstName',
+              withRef: true
+            })
+          ),
+            React.createElement(
+              'div',
+              null,
+              React.createElement(Field, {
+                name: 'lastName',
+                disabled: !initialized,
+                component: TextField,
+                hintText: intl.formatMessage({ id: 'lname_hint' }),
+                floatingLabelText: intl.formatMessage({ id: 'lname_label' }),
+                ref: 'lastName',
+                withRef: true
+              })
+            ),
         React.createElement(
           'div',
           { style: { display: 'flex', alignItems: 'flex-end', flexWrap: 'wrap' } },
@@ -206,7 +232,7 @@ debugger;
 
   return MyAccountForm;
 }(Component);
-debugger;
+
 MyAccountForm.propTypes = process.env.NODE_ENV !== "production" ? {
   getProviderIcon: PropTypes.func.isRequired,
   handleEmailVerificationsSend: PropTypes.func.isRequired,
