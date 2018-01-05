@@ -1,4 +1,4 @@
-import App from 'rmw-shell/lib/App'
+import App from './App'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import configureStore from './store'

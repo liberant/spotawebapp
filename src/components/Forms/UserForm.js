@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { intlShape } from 'react-intl';
 import { Field, reduxForm } from 'redux-form';
 import { TextField } from 'redux-form-material-ui';
-import { AvatarImageField } from 'rmw-shell/es/components/ReduxFormFields';
+import { AvatarImageField } from '../ReduxFormFields';
 import Toggle from 'material-ui/Toggle';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }

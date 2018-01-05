@@ -1,0 +1,41 @@
+import React from 'react';
+import Loadable from 'react-loadable';
+import LoadingComponent from '../../components/LoadingComponent/LoadingComponent';
+import FirebaseProvider from 'firekit-provider';
+
+export default function makeLoadable(opts, preloadComponents) {
+
+  return Loadable.Map({
+    loader: {
+      Component: opts.loader,
+      firebase: opts.firebase,
+      NotificationLayout: function NotificationLayout() {
+        return import('../../containers/NotificationLayout/NotificationLayout');
+      }
+    },
+    loading: LoadingComponent,
+    render: function render(loaded, props) {
+
+      if (preloadComponents !== undefined && preloadComponents instanceof Array) {
+        preloadComponents.map(function (component) {
+          return component.preload();
+        });
+      }
+
+      var Component = loaded.Component.default;
+      var NotificationLayout = loaded.NotificationLayout.default;
+      var firebaseApp = loaded.firebase.firebaseApp;
+
+      return React.createElement(
+        FirebaseProvider,
+        { firebaseApp: firebaseApp },
+        React.createElement(
+          'div',
+          null,
+          React.createElement(Component, props),
+          React.createElement(NotificationLayout, null)
+        )
+      );
+    }
+  });
+};
