@@ -1,14 +1,328 @@
 [{
-    "id": "1234",
-    "updatedAt": "2017-12-29",
-    "createdAt": "2017-12-20",
-    "title": "Lorem Ipsum",
-    "content": "Curabitur ac ligula tellus. Nam ut eros nec ex rhoncus efficitur. Suspendisse cursus malesuada nibh ac imperdiet. Nunc mattis vel arcu in vestibulum. \n\nSuspendisse mollis vel libero ac porta. Donec dapibus magna dui, id imperdiet nisi tristique vel. Curabitur ac lobortis turpis. Duis scelerisque eros convallis odio vehicula, sed imperdiet massa dignissim. \n\nDonec in urna dui. Fusce quis purus at nulla condimentum viverra."
+  "admins" : {
+    "9IqkASWCDug1iCQLlx3HbYbpFL42" : true,
+    "feH31mIH35QH0RuwNLWE6oUF3OM2" : true
   },
-  {
-    "id": "1235",
-    "updatedAt": "2017-12-20",
-    "createdAt": "2017-12-20",
-    "title": "Hello world!",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a libero fringilla, rhoncus elit sed.\n\nDuis faucibus, ex eu consectetur semper, justo augue tincidunt risus, vitae venenatis est felis maximus felis."
-  }]
+  "companies" : {
+    "-L21c5Y6UzHONe93ZZYr" : {
+      "abn" : "445544455",
+      "description" : "We make cool stuff\n",
+      "full_name" : "my company",
+      "name" : "Liberant"
+    }
+  },
+  "predefined_chat_messages" : {
+    "-L21ZaryhJ5ymKlVo5s7" : {
+      "message" : "Are users having providers added properly?"
+    }
+  },
+  "provider_count" : 0,
+  "public_chats" : {
+    "-L21ZXYyzg1ruQdr8g69" : {
+      "authorName" : "Noven Purnell-Webb",
+      "authorPhotoUrl" : "https://lh6.googleusercontent.com/-KTTIj1hT9QE/AAAAAAAAAAI/AAAAAAAAAMs/y-KrbkaTIkY/photo.jpg",
+      "authorUid" : "feH31mIH35QH0RuwNLWE6oUF3OM2",
+      "created" : 1515092847094,
+      "message" : "Hello Everyone"
+    },
+    "-L21aWt4BN8fu5XHo2ND" : {
+      "authorName" : "Noven Purnell-Webb",
+      "authorPhotoUrl" : "https://lh6.googleusercontent.com/-KTTIj1hT9QE/AAAAAAAAAAI/AAAAAAAAAMs/y-KrbkaTIkY/photo.jpg",
+      "authorUid" : "feH31mIH35QH0RuwNLWE6oUF3OM2",
+      "created" : 1515093368634,
+      "message" : "oooh"
+    },
+    "-L21bESgmvb_F1VXoaQA" : {
+      "authorName" : "Noven Purnell-Webb",
+      "authorPhotoUrl" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+      "authorUid" : "9IqkASWCDug1iCQLlx3HbYbpFL42",
+      "created" : 1515093555294,
+      "message" : "wee!"
+    }
+  },
+  "public_tasks" : {
+    "-L21W7xcpEhnX-ej-Hya" : {
+      "completed" : false,
+      "created" : 1515091955894,
+      "title" : "Move email sending to mailgun",
+      "userId" : "feH31mIH35QH0RuwNLWE6oUF3OM2",
+      "userName" : "Noven Purnell-Webb",
+      "userPhotoURL" : "https://lh6.googleusercontent.com/-KTTIj1hT9QE/AAAAAAAAAAI/AAAAAAAAAMs/y-KrbkaTIkY/photo.jpg"
+    }
+  },
+  "public_tasks_count" : 1,
+  "role_grants" : {
+    "-L21ZxjbF62y77ogL3Hu" : {
+      "create_company" : true,
+      "delete_company" : true,
+      "edit_company" : true,
+      "read_companies" : true
+    },
+    "-L21_3uknnTcIenwGUJc" : {
+      "edit_company" : true,
+      "read_companies" : true
+    }
+  },
+  "roles" : {
+    "-L21ZxjbF62y77ogL3Hu" : {
+      "description" : " Create and manage their business",
+      "name" : "Business Owner"
+    },
+    "-L21_3uknnTcIenwGUJc" : {
+      "description" : " Can help out",
+      "name" : "Staff User"
+    }
+  },
+  "user_chat_messages" : {
+    "9IqkASWCDug1iCQLlx3HbYbpFL42" : {
+      "feH31mIH35QH0RuwNLWE6oUF3OM2" : {
+        "-L21ZV8qj17FTVsuCg7R" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://lh6.googleusercontent.com/-KTTIj1hT9QE/AAAAAAAAAAI/AAAAAAAAAMs/y-KrbkaTIkY/photo.jpg",
+          "authorUid" : "feH31mIH35QH0RuwNLWE6oUF3OM2",
+          "created" : 1515092837214,
+          "message" : "Hello Sylvanius!"
+        },
+        "-L21aS4LS07o-rx9Q6Px" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://lh6.googleusercontent.com/-KTTIj1hT9QE/AAAAAAAAAAI/AAAAAAAAAMs/y-KrbkaTIkY/photo.jpg",
+          "authorUid" : "feH31mIH35QH0RuwNLWE6oUF3OM2",
+          "created" : 1515093348934,
+          "message" : "test"
+        },
+        "-L21bBM2ahGtW3LSeBBx" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+          "authorUid" : "9IqkASWCDug1iCQLlx3HbYbpFL42",
+          "created" : 1515093542594,
+          "message" : "hello"
+        },
+        "-L21cHF6BQrucM8lG7iG" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+          "authorUid" : "9IqkASWCDug1iCQLlx3HbYbpFL42",
+          "created" : 1515093828854,
+          "message" : "hmmm"
+        }
+      },
+      "iTuwb5LZz7VtaV1GK1Kq1VfwDMJ3" : {
+        "-L21eirzPsfGGUMc1CoA" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://lh4.googleusercontent.com/-vUfXd69vG-Y/AAAAAAAAAAI/AAAAAAAAABk/UxfzVvgILOA/photo.jpg",
+          "authorUid" : "iTuwb5LZz7VtaV1GK1Kq1VfwDMJ3",
+          "created" : 1515094470395,
+          "message" : "Hey thefe"
+        },
+        "-L21emni-YH_XC4JAPNF" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+          "authorUid" : "9IqkASWCDug1iCQLlx3HbYbpFL42",
+          "created" : 1515094486494,
+          "message" : "back at ya"
+        },
+        "-L21epyLIwKlmmq4jHGw" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+          "authorUid" : "9IqkASWCDug1iCQLlx3HbYbpFL42",
+          "created" : 1515094499454,
+          "message" : "now?"
+        }
+      }
+    },
+    "feH31mIH35QH0RuwNLWE6oUF3OM2" : {
+      "9IqkASWCDug1iCQLlx3HbYbpFL42" : {
+        "-L21ZV8qj17FTVsuCg7R" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://lh6.googleusercontent.com/-KTTIj1hT9QE/AAAAAAAAAAI/AAAAAAAAAMs/y-KrbkaTIkY/photo.jpg",
+          "authorUid" : "feH31mIH35QH0RuwNLWE6oUF3OM2",
+          "created" : 1515092837214,
+          "message" : "Hello Sylvanius!"
+        },
+        "-L21aS4LS07o-rx9Q6Px" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://lh6.googleusercontent.com/-KTTIj1hT9QE/AAAAAAAAAAI/AAAAAAAAAMs/y-KrbkaTIkY/photo.jpg",
+          "authorUid" : "feH31mIH35QH0RuwNLWE6oUF3OM2",
+          "created" : 1515093348934,
+          "message" : "test"
+        },
+        "-L21bBM2ahGtW3LSeBBx" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+          "authorUid" : "9IqkASWCDug1iCQLlx3HbYbpFL42",
+          "created" : 1515093542594,
+          "message" : "hello"
+        },
+        "-L21cHF6BQrucM8lG7iG" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+          "authorUid" : "9IqkASWCDug1iCQLlx3HbYbpFL42",
+          "created" : 1515093828854,
+          "message" : "hmmm"
+        }
+      }
+    },
+    "iTuwb5LZz7VtaV1GK1Kq1VfwDMJ3" : {
+      "9IqkASWCDug1iCQLlx3HbYbpFL42" : {
+        "-L21eirzPsfGGUMc1CoA" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://lh4.googleusercontent.com/-vUfXd69vG-Y/AAAAAAAAAAI/AAAAAAAAABk/UxfzVvgILOA/photo.jpg",
+          "authorUid" : "iTuwb5LZz7VtaV1GK1Kq1VfwDMJ3",
+          "created" : 1515094470395,
+          "message" : "Hey thefe"
+        },
+        "-L21emni-YH_XC4JAPNF" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+          "authorUid" : "9IqkASWCDug1iCQLlx3HbYbpFL42",
+          "created" : 1515094486494,
+          "message" : "back at ya"
+        },
+        "-L21epyLIwKlmmq4jHGw" : {
+          "authorName" : "Noven Purnell-Webb",
+          "authorPhotoUrl" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+          "authorUid" : "9IqkASWCDug1iCQLlx3HbYbpFL42",
+          "created" : 1515094499454,
+          "message" : "now?"
+        }
+      }
+    }
+  },
+  "user_chats" : {
+    "9IqkASWCDug1iCQLlx3HbYbpFL42" : {
+      "feH31mIH35QH0RuwNLWE6oUF3OM2" : {
+        "displayName" : "Noven Purnell-Webb",
+        "lastCreated" : 1515093828854,
+        "lastMessage" : "hmmm",
+        "photoURL" : "https://lh6.googleusercontent.com/-KTTIj1hT9QE/AAAAAAAAAAI/AAAAAAAAAMs/y-KrbkaTIkY/photo.jpg",
+        "unread" : 0
+      },
+      "iTuwb5LZz7VtaV1GK1Kq1VfwDMJ3" : {
+        "displayName" : "Noven Purnell-Webb",
+        "lastCreated" : 1515094499454,
+        "lastMessage" : "now?",
+        "photoURL" : "https://lh4.googleusercontent.com/-vUfXd69vG-Y/AAAAAAAAAAI/AAAAAAAAABk/UxfzVvgILOA/photo.jpg",
+        "unread" : 0
+      }
+    },
+    "feH31mIH35QH0RuwNLWE6oUF3OM2" : {
+      "9IqkASWCDug1iCQLlx3HbYbpFL42" : {
+        "displayName" : "Noven Purnell-Webb",
+        "lastCreated" : 1515093828854,
+        "lastMessage" : "hmmm",
+        "photoURL" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9"
+      }
+    },
+    "iTuwb5LZz7VtaV1GK1Kq1VfwDMJ3" : {
+      "9IqkASWCDug1iCQLlx3HbYbpFL42" : {
+        "displayName" : "Noven Purnell-Webb",
+        "lastCreated" : 1515094499454,
+        "lastMessage" : "now?",
+        "photoURL" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+        "unread" : 2
+      }
+    }
+  },
+  "user_grants" : {
+    "9IqkASWCDug1iCQLlx3HbYbpFL42" : {
+      "create_company" : true,
+      "delete_company" : true,
+      "edit_company" : true,
+      "read_companies" : true
+    }
+  },
+  "user_registrations_per_day" : {
+    "2017" : {
+      "12" : {
+        "29" : 6
+      }
+    },
+    "2018" : {
+      "01" : {
+        "02" : 4,
+        "04" : 10
+      }
+    }
+  },
+  "user_registrations_per_month" : {
+    "2017" : {
+      "12" : 6
+    },
+    "2018" : {
+      "01" : 14
+    }
+  },
+  "user_roles" : {
+    "9IqkASWCDug1iCQLlx3HbYbpFL42" : {
+      "-L21ZxjbF62y77ogL3Hu" : true
+    }
+  },
+  "users" : {
+    "9IqkASWCDug1iCQLlx3HbYbpFL42" : {
+      "displayName" : "Noven Purnell-Webb",
+      "firstName": "Noven",
+      "lastName": "Purnell-Webb",
+      "email" : "noven@sylvanius.net",
+      "phone": "0448841091",
+      "street": "2/11 O'Connell St",
+      "suburb": "West End",
+      "state": "QLD",
+      "emailVerified" : true,
+      "isAnonymous" : false,
+      "photoURL" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+      "providerData" : [ {
+        "displayName" : "Noven Purnell-Webb",
+        "email" : "noven@sylvanius.net",
+        "photoURL" : "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/21751321_10155043886062613_1226337426533432081_n.jpg?oh=d39763471fb08dda8200d402eefac882&oe=5AF96CD9",
+        "providerId" : "facebook.com",
+        "uid" : "10155310430127613"
+      }, {
+        "displayName" : "Noven Purnell-Webb",
+        "email" : "noven@sylvanius.net",
+        "photoURL" : "https://lh3.googleusercontent.com/-oGIpEPaXjlM/AAAAAAAAAAI/AAAAAAAAAAA/0LBJL7sZ1-0/photo.jpg",
+        "providerId" : "google.com",
+        "uid" : "117267756952275865045"
+      }, {
+        "displayName" : "Noven Purnell-Webb",
+        "email" : "noven@liberant.com.au",
+        "photoURL" : "https://pbs.twimg.com/profile_images/600941954235404288/YZ23vVKX_normal.jpg",
+        "providerId" : "twitter.com",
+        "uid" : "3221142672"
+      } ],
+      "interests": [{
+        "ref": "technology"
+      }],
+      "uid" : "9IqkASWCDug1iCQLlx3HbYbpFL42"
+    },
+    "feH31mIH35QH0RuwNLWE6oUF3OM2" : {
+      "displayName" : "Noven Purnell-Webb",
+      "email" : "noven@liberant.com.au",
+      "emailVerified" : true,
+      "isAnonymous" : false,
+      "photoURL" : "https://lh6.googleusercontent.com/-KTTIj1hT9QE/AAAAAAAAAAI/AAAAAAAAAMs/y-KrbkaTIkY/photo.jpg",
+      "providerData" : [ {
+        "displayName" : "Noven Purnell-Webb",
+        "email" : "noven@liberant.com.au",
+        "photoURL" : "https://lh6.googleusercontent.com/-KTTIj1hT9QE/AAAAAAAAAAI/AAAAAAAAAMs/y-KrbkaTIkY/photo.jpg",
+        "providerId" : "google.com",
+        "uid" : "110492948942715391168"
+      } ],
+      "uid" : "feH31mIH35QH0RuwNLWE6oUF3OM2"
+    },
+    "iTuwb5LZz7VtaV1GK1Kq1VfwDMJ3" : {
+      "displayName" : "Noven Purnell-Webb",
+      "email" : "noven.purnellwebb@theappteam.com.au",
+      "emailVerified" : true,
+      "isAnonymous" : false,
+      "photoURL" : "https://lh4.googleusercontent.com/-vUfXd69vG-Y/AAAAAAAAAAI/AAAAAAAAABk/UxfzVvgILOA/photo.jpg",
+      "providerData" : [ {
+        "displayName" : "Noven Purnell-Webb",
+        "email" : "noven.purnellwebb@theappteam.com.au",
+        "photoURL" : "https://lh4.googleusercontent.com/-vUfXd69vG-Y/AAAAAAAAAAI/AAAAAAAAABk/UxfzVvgILOA/photo.jpg",
+        "providerId" : "google.com",
+        "uid" : "101911874013935866727"
+      } ],
+      "uid" : "iTuwb5LZz7VtaV1GK1Kq1VfwDMJ3"
+    }
+  },
+  "users_count" : 3
+}]
