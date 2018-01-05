@@ -1,15 +1,7 @@
-
-import Activity from './containers/Activity';
-import ChatMessages from './containers/ChatMessages';
-import Scrollbar from './components/Scrollbar';
-import SearchField from './components/SearchField';
-import registerServiceWorker from './registerServiceWorker';
-import withAppConfigs from './withAppConfigs';
-
+import Root from './containers/Root';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import Root from './containers/Root';
 import AppConfigProvider from './components/AppConfigProvider';
 import configureStore from './store';
 import config from './config';

@@ -4,7 +4,7 @@ import { injectIntl } from 'react-intl'
 import { Field, reduxForm } from 'redux-form'
 import { TextField } from 'redux-form-material-ui'
 import RaisedButton from 'material-ui/RaisedButton'
-import { SuperSelectField } from 'rmw-shell/lib/components/ReduxFormFields'
+import { SuperSelectField } from '../ReduxFormFields'
 import Avatar from 'material-ui/Avatar'
 import FontIcon from 'material-ui/FontIcon'
 

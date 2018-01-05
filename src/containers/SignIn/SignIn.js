@@ -44,7 +44,7 @@ export var SignIn = function (_Component) {
         }
       },
       signInOptions: appConfig.firebase_providers,
-      credentialHelper: firebaseui.auth.CredentialHelper.NONE
+      credentialHelper: AuthUI.firebaseui.auth.CredentialHelper.NONE
     };
 
     return React.createElement(

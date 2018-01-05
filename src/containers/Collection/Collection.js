@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { injectIntl, intlShape } from 'react-intl'
-import { Activity } from 'rmw-shell'
+import Activity from '../../containers/Activity'
 import RaisedButton from 'material-ui/RaisedButton'
 import {withFirebase} from 'firekit-provider';
 import TextField from 'material-ui/TextField'
@@ -10,7 +10,7 @@ import {List, ListItem} from 'material-ui/List';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
 // eslint-disable-next-line
-import firestore from 'firebase/firestore'
+//import firestore from 'firebase/firestore'
 
 class Collection extends Component {
 

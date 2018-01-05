@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from 'react-intl';
-import { Activity } from 'rmw-shell';
+import Activity from '../../containers/Activity';
 import { setSimpleValue } from 'rmw-shell';
 import MyAccountForm from '../../components/Forms/MyAccountForm';
 import { withRouter } from 'react-router-dom';

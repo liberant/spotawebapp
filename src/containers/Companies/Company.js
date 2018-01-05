@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from 'react-intl';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import { Activity } from 'rmw-shell'
+import Activity from '../../containers/Activity'
 import { ResponsiveMenu } from 'material-ui-responsive-menu';
 import { setDialogIsOpen } from 'rmw-shell/lib/store/dialogs/actions';
 import CompanyForm from '../../components/Forms/CompanyForm';

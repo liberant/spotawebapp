@@ -14,7 +14,7 @@ import { withFirebase } from 'firekit-provider';
 import ReactList from 'react-list';
 import { FilterDrawer, filterSelectors, filterActions } from 'material-ui-filter';
 import { GoogleIcon, FacebookIcon, GitHubIcon, TwitterIcon } from '../../components/Icons';
-import { Activity } from 'rmw-shell';
+import Activity from '../../containers/Activity';
 import Scrollbar from '../../components/Scrollbar/Scrollbar';
 import SearchField from '../../components/SearchField';
 import { ResponsiveMenu } from 'material-ui-responsive-menu';

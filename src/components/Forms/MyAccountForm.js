@@ -5,10 +5,10 @@ import { intlShape } from 'react-intl';
 import { Field, reduxForm } from 'redux-form';
 import { TextField } from 'redux-form-material-ui';
 import FontIcon from 'material-ui/FontIcon';
-import { ImageCropDialog } from 'rmw-shell/es/containers/ImageCropDialog';
+import { ImageCropDialog } from '../../containers/ImageCropDialog';
 import IconButton from 'material-ui/IconButton';
-import { AvatarImageField } from 'rmw-shell/es/components/ReduxFormFields';
-import { withAppConfigs } from 'rmw-shell';
+import { AvatarImageField } from '../../components/ReduxFormFields';
+import withAppConfigs from '../../withAppConfigs';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
