@@ -169,13 +169,19 @@ export var MyAccount = function (_Component) {
           authError = _this$props5.authError;
 
 
-      var simpleChange = values.displayName && values.displayName.localeCompare(auth.displayName) || values.firstName && values.firstName.localeCompare(auth.firstName) || values.lastName && values.lastName.localeCompare(auth.lastName) || values.photoURL && values.photoURL.localeCompare(auth.photoURL);
+      var simpleChange = values.displayName && values.displayName.localeCompare(auth.displayName) || values.firstName && values.firstName.localeCompare(auth.firstName) || values.lastName && values.lastName.localeCompare(auth.lastName) || values.photoURL && values.photoURL.localeCompare(auth.photoURL) || values.phone && values.phone.localeCompare(auth.phone)  || values.street && values.street.localeCompare(auth.street) || values.suburb && values.suburb.localeCompare(auth.suburb) || values.state && values.state.localeCompare(auth.state) || values.postcode && values.postcode.localeCompare(auth.postcode) ;
+
 
       var simpleValues = {
         displayName: values.displayName,
         firstName: values.firstName,
         lastName: values.lastName,
-        photoURL: values.photoURL
+        photoURL: values.photoURL,
+        phone: values.phone,
+        street: values.street,
+        suburb: values.suburb,
+        state: values.state,
+        postcode: values.postcode
 
         //Change simple data
       };if (simpleChange) {

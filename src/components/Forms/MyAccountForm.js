@@ -27,19 +27,19 @@ var MyAccountForm = function (_Component) {
 
   MyAccountForm.prototype.render = function render() {
     var _props = this.props,
-        handleSubmit = _props.handleSubmit,
-        intl = _props.intl,
-        initialized = _props.initialized,
-        setSimpleValue = _props.setSimpleValue,
-        new_company_photo = _props.new_company_photo,
-        auth = _props.auth,
-        muiTheme = _props.muiTheme,
-        isLinkedWithProvider = _props.isLinkedWithProvider,
-        linkUserWithPopup = _props.linkUserWithPopup,
-        getProviderIcon = _props.getProviderIcon,
-        handleEmailVerificationsSend = _props.handleEmailVerificationsSend,
-        appConfig = _props.appConfig,
-        handlePhotoUploadSuccess = _props.handlePhotoUploadSuccess;
+      handleSubmit = _props.handleSubmit,
+      intl = _props.intl,
+      initialized = _props.initialized,
+      setSimpleValue = _props.setSimpleValue,
+      new_company_photo = _props.new_company_photo,
+      auth = _props.auth,
+      muiTheme = _props.muiTheme,
+      isLinkedWithProvider = _props.isLinkedWithProvider,
+      linkUserWithPopup = _props.linkUserWithPopup,
+      getProviderIcon = _props.getProviderIcon,
+      handleEmailVerificationsSend = _props.handleEmailVerificationsSend,
+      appConfig = _props.appConfig,
+      handlePhotoUploadSuccess = _props.handlePhotoUploadSuccess;
 
 
     var uid = auth.uid;
@@ -47,13 +47,15 @@ var MyAccountForm = function (_Component) {
 
     return React.createElement(
       'form',
-      { onSubmit: handleSubmit, style: {
+      {
+        onSubmit: handleSubmit, style: {
           height: '100%',
           alignItems: 'strech',
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center'
-        } },
+        }
+      },
       React.createElement(
         'div',
         { style: { margin: 15, display: 'flex', flexDirection: 'column', alignItems: 'center' } },
@@ -63,7 +65,8 @@ var MyAccountForm = function (_Component) {
           change: this.props.change,
           initialized: initialized,
           intl: intl,
-          path: 'users' }),
+          path: 'users'
+        }),
         React.createElement(
           'div',
           null,
@@ -77,7 +80,8 @@ var MyAccountForm = function (_Component) {
                   onClick: function onClick() {
                     linkUserWithPopup(p);
                   },
-                  tooltip: intl.formatMessage({ id: 'link_with_' + p }) },
+                  tooltip: intl.formatMessage({ id: 'link_with_' + p })
+                },
                 getProviderIcon(p)
               );
             } else {
@@ -105,30 +109,40 @@ var MyAccountForm = function (_Component) {
         ),
         React.createElement(
           'div',
-            null,
-            React.createElement(Field, {
-              name: 'firstName',
-              disabled: !initialized,
-              component: TextField,
-              hintText: intl.formatMessage({ id: 'fname_hint' }),
-              floatingLabelText: intl.formatMessage({ id: 'fname_label' }),
-              ref: 'firstName',
-              withRef: true
-            })
-          ),
-            React.createElement(
-              'div',
-              null,
-              React.createElement(Field, {
-                name: 'lastName',
-                disabled: !initialized,
-                component: TextField,
-                hintText: intl.formatMessage({ id: 'lname_hint' }),
-                floatingLabelText: intl.formatMessage({ id: 'lname_label' }),
-                ref: 'lastName',
-                withRef: true
-              })
-            ),
+          null,
+          React.createElement(Field, {
+            name: 'firstName',
+            disabled: !initialized,
+            component: TextField,
+            hintText: intl.formatMessage({ id: 'fname_hint' }),
+            floatingLabelText: intl.formatMessage({ id: 'fname_label' }),
+            ref: 'firstName',
+            withRef: true
+          }),
+          React.createElement(Field, {
+            name: 'lastName',
+            disabled: !initialized,
+            component: TextField,
+            hintText: intl.formatMessage({ id: 'lname_hint' }),
+            floatingLabelText: intl.formatMessage({ id: 'lname_label' }),
+            ref: 'lastName',
+            withRef: true
+          })
+        ),
+        React.createElement(
+          'div',
+          null,
+          React.createElement(Field, {
+            name: 'phone',
+            // disabled: !initialized,
+            component: TextField,
+            fullWidth: true,
+            hintText: intl.formatMessage({ id: 'phone_hint' }),
+            floatingLabelText: intl.formatMessage({ id: 'phone_label' }),
+            ref: 'phone',
+            withRef: true
+          })
+        ),
         React.createElement(
           'div',
           { style: { display: 'flex', alignItems: 'flex-end', flexWrap: 'wrap' } },
@@ -152,15 +166,82 @@ var MyAccountForm = function (_Component) {
               IconButton,
               {
                 onClick: auth.emailVerified === true ? undefined : handleEmailVerificationsSend,
-                tooltip: intl.formatMessage({ id: auth.emailVerified === true ? 'email_verified' : 'email_not_verified' }) },
+                tooltip: intl.formatMessage({ id: auth.emailVerified === true ? 'email_verified' : 'email_not_verified' })
+              },
               React.createElement(
                 FontIcon,
                 {
                   color: auth.emailVerified === true ? muiTheme.palette.primary1Color : muiTheme.palette.accent1Color,
                   style: { 'paddingLeft': 10 },
-                  className: 'material-icons' },
+                  className: 'material-icons'
+                },
                 auth.emailVerified === true ? 'verified_user' : 'error'
               )
+            )
+          )
+        ),
+        React.createElement(
+          'div',
+          null,
+          React.createElement(Field, {
+            name: 'street',
+            disabled: !initialized,
+            component: TextField,
+            hintText: intl.formatMessage({ id: 'street_hint' }),
+            floatingLabelText: intl.formatMessage({ id: 'street_label' }),
+            ref: 'street',
+            withRef: true
+          })
+        ),
+        React.createElement(
+          'div',
+          null,
+          React.createElement(Field, {
+            name: 'suburb',
+            disabled: !initialized,
+            component: TextField,
+            hintText: intl.formatMessage({ id: 'suburb_hint' }),
+            floatingLabelText: intl.formatMessage({ id: 'suburb_label' }),
+            ref: 'suburb',
+            withRef: true
+          })
+        ),
+        React.createElement(
+          'div',
+          null,
+          React.createElement(Field, {
+            name: 'state',
+            disabled: !initialized,
+            component: TextField,
+            hintText: intl.formatMessage({ id: 'state_hint' }),
+            floatingLabelText: intl.formatMessage({ id: 'state_label' }),
+            ref: 'state',
+            withRef: true
+          }),
+          React.createElement(Field, {
+            name: 'postcode',
+            disabled: !initialized,
+            component: TextField,
+            hintText: intl.formatMessage({ id: 'postcode_hint' }),
+            floatingLabelText: intl.formatMessage({ id: 'postcode_label' }),
+            ref: 'postcode',
+            withRef: true
+          })
+        ),
+
+        React.createElement(
+          'div',
+          null,
+          React.createElement(
+            IconButton,
+            React.createElement(
+              FontIcon,
+              {
+                color: auth.emailVerified === true ? muiTheme.palette.primary1Color : muiTheme.palette.accent1Color,
+                style: { 'paddingLeft': 10 },
+                className: 'material-icons'
+              },
+              auth.emailVerified === true ? 'verified_user' : 'error'
             )
           )
         ),
