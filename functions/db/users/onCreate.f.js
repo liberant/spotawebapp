@@ -6,7 +6,7 @@ const counting = require('../../utils/counting')
 exports = module.exports = functions.database.ref('/users/{userUid}').onCreate(
   event => {
 
-    const user = event.data // The Firebase user.
+    const user=event.data // The Firebase user.
     const provider=user.providerData?user.providerData[0]:{}
     const providerId=provider.providerId?provider.providerId.replace('.com',''):provider.providerId;
 

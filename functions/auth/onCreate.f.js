@@ -10,6 +10,9 @@ exports = module.exports = functions.auth.user().onCreate( event => {
   const user = event.data // The Firebase user.
   const email = user.email // The email of the user.
   const displayName = user.displayName // The display name of the user.
+  const firstName = user.displayName.split(' ')[0];
+  const lastName = user.displayName.split(' ')[1];
+
   const year=event.data.metadata.creationTime.slice(0, 4)
   const month=event.data.metadata.creationTime.slice(5, 7)
   const day=event.data.metadata.creationTime.slice(8, 10)
